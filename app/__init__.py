@@ -12,4 +12,4 @@ login = LoginManager(app)
 login.login_view = 'login'
 
 # Importing here is workaround to circular imports
-from app import routes, models
+from app import routes, models, errors
