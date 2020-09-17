@@ -1,8 +1,8 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField
-from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, Length
-from app.models import User
+from wtforms import StringField, SubmitField, TextAreaField
+from wtforms.validators import ValidationError, DataRequired, Length
 from flask_babel import _, lazy_gettext as _l
+from app.models import User
 
 
 class EditProfileForm(FlaskForm):
@@ -26,5 +26,5 @@ class EmptyForm(FlaskForm):
 
 
 class PostForm(FlaskForm):
-    post = TextAreaField(_l('Say something'), validators=[DataRequired(), Length(min=1, max=140)])
+    post = TextAreaField(_l('Say something'), validators=[DataRequired()])
     submit = SubmitField(_l('Submit'))
