@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-09-17 13:01+0300\n"
+"POT-Creation-Date: 2020-09-19 17:05+0300\n"
 "PO-Revision-Date: 2020-09-16 12:36+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -102,7 +102,7 @@ msgstr "Ваш пароль был восстановлен."
 msgid "About me"
 msgstr "Обо мне"
 
-#: app/main/forms.py:12 app/main/forms.py:31
+#: app/main/forms.py:12 app/main/forms.py:31 app/main/forms.py:47
 msgid "Submit"
 msgstr "Отправить"
 
@@ -113,6 +113,10 @@ msgstr "Скажите что-нибудь"
 #: app/main/forms.py:35 app/main/routes.py:183
 msgid "Search"
 msgstr "Искать"
+
+#: app/main/forms.py:46
+msgid "Message"
+msgstr "Сообщение"
 
 #: app/main/routes.py:35
 msgid "Your post is now live!"
@@ -157,12 +161,20 @@ msgstr "Вы не можете отписаться от себя!"
 msgid "You are not following %(username)s."
 msgstr "Вы отписались от %(username)s."
 
-#: app/templates/_post.html:14
+#: app/main/routes.py:204
+msgid "Your message has been sent."
+msgstr "Ваше сообщение было отправлено."
+
+#: app/main/routes.py:208
+msgid "Send Message"
+msgstr "Отправить Сообщение"
+
+#: app/templates/_post.html:16
 #, python-format
 msgid "%(username)s said %(when)s"
 msgstr "%(username)s сказал %(when)s"
 
-#: app/templates/_post.html:25
+#: app/templates/_post.html:27
 msgid "Translate"
 msgstr "Перевести"
 
@@ -174,15 +186,19 @@ msgstr "Добро пожаловать в Microblog"
 msgid "Login"
 msgstr "Авторизоваться"
 
-#: app/templates/base.html:28
+#: app/templates/base.html:30 app/templates/messages.html:4
+msgid "Messages"
+msgstr "Сообщения"
+
+#: app/templates/base.html:33
 msgid "Profile"
 msgstr "Профиль"
 
-#: app/templates/base.html:29
+#: app/templates/base.html:34
 msgid "Logout"
 msgstr "Выйти"
 
-#: app/templates/base.html:75
+#: app/templates/base.html:80
 msgid "Error: Could not contact server."
 msgstr "Ошибка: не удалось связаться с сервером."
 
@@ -191,13 +207,21 @@ msgstr "Ошибка: не удалось связаться с сервером
 msgid "Hi, %(username)s!"
 msgstr "Привет, %(username)s!"
 
-#: app/templates/index.html:17 app/templates/user.html:41
+#: app/templates/index.html:17 app/templates/user.html:48
 msgid "Newer posts"
 msgstr "Новые публикации"
 
-#: app/templates/index.html:22 app/templates/user.html:46
+#: app/templates/index.html:22 app/templates/user.html:53
 msgid "Older posts"
 msgstr "Старые публикации"
+
+#: app/templates/messages.html:12
+msgid "Newer messages"
+msgstr "Новые сообщения"
+
+#: app/templates/messages.html:17
+msgid "Older messages"
+msgstr "Старые сообщения"
 
 #: app/templates/search.html:4
 msgid "Search Results"
@@ -211,20 +235,25 @@ msgstr "Предыдущие результаты"
 msgid "Next results"
 msgstr "Следующие результаты"
 
+#: app/templates/send_message.html:5
+#, python-format
+msgid "Send Message to %(recipient)s"
+msgstr "Отправить сообщение %(recipient)s"
+
 #: app/templates/user.html:8
 msgid "User"
 msgstr "Пользователь"
 
-#: app/templates/user.html:11
+#: app/templates/user.html:11 app/templates/user_popup.html:9
 msgid "Last seen on"
 msgstr "В последний раз видели"
 
-#: app/templates/user.html:13
+#: app/templates/user.html:13 app/templates/user_popup.html:12
 #, python-format
 msgid "%(count)d followers"
 msgstr "%(count)d подписчиков"
 
-#: app/templates/user.html:13
+#: app/templates/user.html:13 app/templates/user_popup.html:13
 #, python-format
 msgid "%(count)d following"
 msgstr "%(count)d подписок"
@@ -233,13 +262,17 @@ msgstr "%(count)d подписок"
 msgid "Edit your profile"
 msgstr "Изменить ваш профиль"
 
-#: app/templates/user.html:20
+#: app/templates/user.html:20 app/templates/user_popup.html:20
 msgid "Follow"
 msgstr "Подписаться"
 
-#: app/templates/user.html:27
+#: app/templates/user.html:27 app/templates/user_popup.html:27
 msgid "Unfollow"
 msgstr "Отписаться"
+
+#: app/templates/user.html:34
+msgid "Send private message"
+msgstr "Отправить личное сообщение"
 
 #: app/templates/auth/login.html:12
 msgid "New User?"
