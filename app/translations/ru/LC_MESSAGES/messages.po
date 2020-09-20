@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-09-19 17:05+0300\n"
+"POT-Creation-Date: 2020-09-20 15:29+0300\n"
 "PO-Revision-Date: 2020-09-16 12:36+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: app/__init__.py:20
+#: app/__init__.py:22
 msgid "Please log in to access this page."
 msgstr "Пожалуста войдите, чтобы получить доступ к этой странице."
 
@@ -161,13 +161,21 @@ msgstr "Вы не можете отписаться от себя!"
 msgid "You are not following %(username)s."
 msgstr "Вы отписались от %(username)s."
 
-#: app/main/routes.py:204
+#: app/main/routes.py:205
 msgid "Your message has been sent."
 msgstr "Ваше сообщение было отправлено."
 
-#: app/main/routes.py:208
+#: app/main/routes.py:209
 msgid "Send Message"
 msgstr "Отправить Сообщение"
+
+#: app/main/routes.py:249
+msgid "An export task is currently in progress"
+msgstr "В настоящее время выполняется экспорт."
+
+#: app/main/routes.py:251
+msgid "Exporting posts..."
+msgstr "Экспортирование публикаций..."
 
 #: app/templates/_post.html:16
 #, python-format
@@ -190,15 +198,15 @@ msgstr "Авторизоваться"
 msgid "Messages"
 msgstr "Сообщения"
 
-#: app/templates/base.html:33
+#: app/templates/base.html:39
 msgid "Profile"
 msgstr "Профиль"
 
-#: app/templates/base.html:34
+#: app/templates/base.html:40
 msgid "Logout"
 msgstr "Выйти"
 
-#: app/templates/base.html:80
+#: app/templates/base.html:91
 msgid "Error: Could not contact server."
 msgstr "Ошибка: не удалось связаться с сервером."
 
@@ -207,11 +215,11 @@ msgstr "Ошибка: не удалось связаться с сервером
 msgid "Hi, %(username)s!"
 msgstr "Привет, %(username)s!"
 
-#: app/templates/index.html:17 app/templates/user.html:48
+#: app/templates/index.html:17 app/templates/user.html:55
 msgid "Newer posts"
 msgstr "Новые публикации"
 
-#: app/templates/index.html:22 app/templates/user.html:53
+#: app/templates/index.html:22 app/templates/user.html:60
 msgid "Older posts"
 msgstr "Старые публикации"
 
@@ -262,15 +270,19 @@ msgstr "%(count)d подписок"
 msgid "Edit your profile"
 msgstr "Изменить ваш профиль"
 
-#: app/templates/user.html:20 app/templates/user_popup.html:20
+#: app/templates/user.html:19
+msgid "Export your posts"
+msgstr "Экспортировать ваши публикации"
+
+#: app/templates/user.html:27 app/templates/user_popup.html:20
 msgid "Follow"
 msgstr "Подписаться"
 
-#: app/templates/user.html:27 app/templates/user_popup.html:27
+#: app/templates/user.html:34 app/templates/user_popup.html:27
 msgid "Unfollow"
 msgstr "Отписаться"
 
-#: app/templates/user.html:34
+#: app/templates/user.html:41
 msgid "Send private message"
 msgstr "Отправить личное сообщение"
 
