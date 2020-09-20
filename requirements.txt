@@ -13,3 +13,5 @@ flask-babel==2.0.0
 guess-language-spirit==0.5.3
 requests==2.24.0
 elasticsearch==7.9.1
+redis==3.5.3
+rq==1.5.2
